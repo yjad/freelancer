@@ -1,6 +1,7 @@
 import PyPDF2
 
-filename = r"C:\Yahia\HDB\DTS\2- Projects\VASCO\3- Execution - VASCO\Fraud- RA\Analysis sessions\OneSpan CBE Regulation Internet Banking.pdf"
+# filename = r"C:\Yahia\HDB\DTS\2- Projects\VASCO\3- Execution - VASCO\Fraud- RA\Analysis sessions\OneSpan CBE Regulation Internet Banking.pdf"
+filename = r"C:\Users\yahia\Downloads\41832448_AI-bot-for-Trading.pdf"
 
 pdf = PyPDF2.PdfFileReader(open(filename, "rb"))
 # for page in pdf.pages:
@@ -11,14 +12,19 @@ pdf = PyPDF2.PdfFileReader(open(filename, "rb"))
 # print ("# of pages:", pdf.getNumPages())
 # print ("page Layout:", pdf.pageLayout(pdf.getPage(1)))
 
-page = pdf.getPage(1)
-print (page)
-#print (page.extractText())
-
+page = pdf.getPage(0)
+# print (page)
+# print (page.extractText())
+txt = page.extractText()
+print (txt)
+#fp = open("x.txt", "wb")
+# fp.write(bytes(page.extractText()), encoding = 'utf-8')
+# fp.write(bytearray(page.extractText(), 'utf8'))
+# fp.close()
 #txt = page.extractText()
 #print (type(txt))
 # for i, t in enumerate(txt):
-#     print (i, ":", t)
+#     print (i, ":",t, "ascii:",  ord(t))
 
 #print (txt)
 
