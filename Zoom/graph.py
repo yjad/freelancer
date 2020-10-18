@@ -1,7 +1,7 @@
 #libraries
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import rc
+from matplotlib import rc, image
 import pandas as pd
 
 
@@ -45,3 +45,8 @@ def plot_stacked_bar(bars1, bars2, names, file_name):
     # Show graphic
     #plt.show()
     plt.savefig(file_name)
+    
+def display_image(filename):
+    img = image.imread(filename)
+    plt.imshow(img) 
+    plt.show()  # display it

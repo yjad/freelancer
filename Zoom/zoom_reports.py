@@ -102,7 +102,7 @@ def stats_attendees_graph():
                     FROM (
                         SELECT DATE(join_time) as meeting_date, type as meeting_type, topic,  name, firstname
                         FROM attendees a 
-                        LEFT Join Users ON a.user_email = Users.email
+                        LEFT Join student ON a.user_email = student.email
                         LEFT Join meetings m ON a.meeting_uuid = m.uuid
                         GROUP BY meeting_date, name 
                         )
@@ -142,6 +142,33 @@ def attendees_per_month(file_name):
     # plot last n lines
     for row in rows:
         names.append(row[0])    # meeting date
+        bars1.append(row[1])    # count (first name) --> Academy students
+        bars2.append(row[3])    # External Students
+    plot_stacked_bar(bars1, bars2, names, file_name)
+
+
+def attendees_per_day_of_week(file_name):
+    #update_meetings()
+    sql = f"""SELECT strftime('%w',meeting_date) as day_of_week, COUNT(name), COUNT(firstname), COUNT(name) - COUNT(firstname) 
+                    FROM (
+                        SELECT DATE(join_time) as meeting_date,  name, firstname
+                        FROM attendees a 
+                        LEFT Join student ON a.user_email = student.email
+                        LEFT Join meetings m ON a.meeting_uuid = m.uuid
+                        GROUP BY meeting_date, name 
+                        )
+                    GROUP BY day_of_week
+                    ORDER BY 1"""
+    comm, curspr = open_db()
+    rows = exec_query(curspr, sql)
+    close_db(curspr)
+    bars1=[]
+    bars2 = []
+    names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday ', 'Thursday', 'Friday', 'Saturday']
+
+    # plot last n lines
+    for row in rows:
+        #names.append(row[0])    # meeting day
         bars1.append(row[1])    # count (first name) --> Academy students
         bars2.append(row[3])    # External Students
     plot_stacked_bar(bars1, bars2, names, file_name)
