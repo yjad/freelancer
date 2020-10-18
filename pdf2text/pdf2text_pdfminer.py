@@ -5,9 +5,15 @@ from pdfminer.converter import XMLConverter, HTMLConverter, TextConverter
 from pdfminer.layout import LAParams
 import io
 
+<<<<<<< HEAD
 def pdfparser(filename):
 
     fp = open(filename, 'rb')
+=======
+def pdfparser(data):
+
+    fp = open(data, 'rb')
+>>>>>>> 6d491bc042e86688b60a965fcdaf4c69a46b249b
     rsrcmgr = PDFResourceManager()
     retstr = io.StringIO()
     codec = 'utf-8'
@@ -26,5 +32,9 @@ def pdfparser(filename):
 
 if __name__ == '__main__':
     #pdfparser(r"C:\Users\yahia\Downloads\41832448_AI-bot-for-Trading.pdf")
+<<<<<<< HEAD
     # pdfparser(r"C:\Yahia\HDB\DTS\2- Projects\VASCO\3- Execution - VASCO\Fraud- RA\Analysis sessions\OneSpan CBE Regulation Internet Banking.pdf")
     pdfparser(r"C:\Users\yahia\Downloads\Assgn3-LinkedListsArray (1).pdf")
+=======
+    pdfparser(r"C:\Yahia\HDB\DTS\2- Projects\VASCO\3- Execution - VASCO\Fraud- RA\Analysis sessions\OneSpan CBE Regulation Internet Banking.pdf")
+>>>>>>> 6d491bc042e86688b60a965fcdaf4c69a46b249b

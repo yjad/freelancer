@@ -1,7 +1,11 @@
 import xml.etree.ElementTree as ET
 import json
 
+<<<<<<< HEAD
 FILE_NAME = r'E:\Yahia-Home\Python\src\Freelancer\xml2json\data\test.xml'
+=======
+FILE_NAME = r'.\data\test.xml'
+>>>>>>> 6d491bc042e86688b60a965fcdaf4c69a46b249b
 root = ET.parse(FILE_NAME).getroot()
 
 # for type_tag in root.findall('bar/type'):
@@ -31,5 +35,9 @@ for child in root:
     catalog_arr.append(dict_y)
 
 catalog = {root.tag:catalog_arr}
+<<<<<<< HEAD
 print(json.dumps(catalog, indent=4))
 #input("press any key to continue")
+=======
+print(json.dumps(catalog, indent=4))
+>>>>>>> 6d491bc042e86688b60a965fcdaf4c69a46b249b
