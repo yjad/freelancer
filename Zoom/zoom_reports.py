@@ -102,7 +102,7 @@ def stats_attendees_graph():
                     FROM (
                         SELECT DATE(join_time) as meeting_date, type as meeting_type, topic,  name, firstname
                         FROM attendees a 
-                        LEFT Join student ON a.user_email = student.email
+                        LEFT Join students ON a.user_email = students.email
                         LEFT Join meetings m ON a.meeting_uuid = m.uuid
                         GROUP BY meeting_date, name 
                         )
@@ -126,7 +126,7 @@ def attendees_per_month(file_name):
                     FROM (
                         SELECT DATE(join_time) as meeting_date,  name, firstname
                         FROM attendees a 
-                        LEFT Join student ON a.user_email = student.email
+                        LEFT Join students ON a.user_email = students.email
                         LEFT Join meetings m ON a.meeting_uuid = m.uuid
                         GROUP BY meeting_date, name 
                         )
@@ -153,7 +153,7 @@ def attendees_per_day_of_week(file_name):
                     FROM (
                         SELECT DATE(join_time) as meeting_date,  name, firstname
                         FROM attendees a 
-                        LEFT Join student ON a.user_email = student.email
+                        LEFT Join students ON a.user_email = students.email
                         LEFT Join meetings m ON a.meeting_uuid = m.uuid
                         GROUP BY meeting_date, name 
                         )
@@ -180,7 +180,7 @@ def attendees_last_2_month(file_name):
                     FROM (
                         SELECT DATE(join_time) as meeting_date, type as meeting_type, topic,  name, firstname
                         FROM attendees a 
-                        LEFT Join student ON a.user_email = student.email
+                        LEFT Join students ON a.user_email = students.email
                         LEFT Join meetings m ON a.meeting_uuid = m.uuid
                         WHERE DATE(join_time) > DATE('now', '-2 Month')
                         GROUP BY meeting_date, name 
@@ -202,9 +202,10 @@ def attendees_last_2_month(file_name):
     plot_stacked_bar(bars1, bars2, names, file_name)
 
 
-def zoom_stats_for_academy_flask():
+def zoom_stats_as_image():
     
-    OUT_DIR = r"E:\Yahia-Home\Python\src\Academy\flaskblog\static\out"
-    update_meetings()
-    attendees_last_2_month(os.path.join(OUT_DIR, "attendees_last_2_month.png"))
+    OUT_DIR = r"C:\Yahia\Home\Yahia-Dev\Python\freelancer\Zoom\data"
+    #update_meetings()
+    #attendees_last_2_month(os.path.join(OUT_DIR, "attendees_last_2_month.png"))
     attendees_per_month(os.path.join(OUT_DIR, "attendees_per_month.png"))
+    #attendees_per_day_of_week(os.path.join(OUT_DIR,"attendees_per_day_of_week.png"))

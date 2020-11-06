@@ -1,8 +1,8 @@
 
 from zoom import load_zoom_meetings, get_zoom_report_daily, load_zoom_telephone_report, get_meeting_details
 from zoom_reports import stats_attendees, attendance_sheet, list_unmatched_attendees, update_meetings, \
-    stats_attendees_graph, attendees_last_2_month, attendees_per_month, zoom_stats_for_academy_flask, \
-    attendees_per_day_of_week
+    stats_attendees_graph, attendees_last_2_month, attendees_per_month, \
+    attendees_per_day_of_week, zoom_stats_as_image
 from graph import display_image
 
 if __name__ == "__main__":
@@ -22,4 +22,5 @@ if __name__ == "__main__":
     # attendees_per_month(r".\data\attendees_per_month.png")
     #zoom_stats_for_academy_flask()
     #attendees_per_day_of_week(r".\data\attendees_per_day_of_week.png")
-    display_image(r".\data\attendees_per_day_of_week.png")
+    #display_image(r".\data\attendees_per_day_of_week.png")
+    zoom_stats_as_image()
