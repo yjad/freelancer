@@ -1,0 +1,6 @@
+*/data/*.sqlite
+*/out/
+*/Old/
+*/.idea/
+*/__pycache__/
+*.pdf
