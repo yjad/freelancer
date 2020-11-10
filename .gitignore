@@ -1,6 +1,8 @@
+/.idea/
 */data/*.sqlite
 */out/
 */Old/
 */.idea/
 */__pycache__/
 *.pdf
+pandas_tutorial/data/HQ-LINUX.csv
