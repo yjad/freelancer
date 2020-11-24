@@ -14,9 +14,7 @@ def load_sample_data():
     print (df)
 
 def load_linux_csv():
-    data_file = r"C:\Yahia\HDB\DTS\2- Projects\Vulnerability\3-Execution\Qradar\09-2020 - Copy\QRadar-Vulnerabilities-SAN\DR-Data-Center-SAN-Switches & Routers\DR-Blade-SAN-SW-1\2020-03-15-data_export.csv"
-    df = pd.read_csv(r".\data\HQ-LINUX.csv", sep = ",")
-
+    df = pd.read_csv(r".\data\HQ-LINUX.csv", sep = ";")
     return df
 
 def plot_data(df):
@@ -52,9 +50,6 @@ pd.set_option("display.max_rows", 25)
 # print (df.describe())
 # print (df.head)
 # print (df.risk)
-# server_vul_by_risk = df.groupby(["ipaddress","risk"])["name"].count()
-# df_plot = server_vul_by_risk.head(20)
-# print (df_plot.index)
 server_vul_by_risk = df.groupby(["ipaddress","risk"])["name"].count()
 df_plot = server_vul_by_risk.head(20)
 print (df_plot.index)

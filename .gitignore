@@ -1,5 +1,6 @@
 /.idea/
-*/data/*.sqlite
+*/data/
+*/data/.sqlite
 */out/
 */Old/
 */.idea/
