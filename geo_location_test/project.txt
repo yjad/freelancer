@@ -1,0 +1,18 @@
+
+- US Zip Code
+- city name
+- geo code
+
+Example is attached - however the example is just one of many.
+
+I'd like the script to accept read from MySQL (I will provide query) and then:
+
+- if there is multiple locations per line
+- determine the most accurate (likely geo coordinates) value, but build a full hierarchy please
+- geo code each value
+
+Save just one 'source of truth' geo code value into db as lat,lon i.e. -23.788,-34.8888
+
+Thanks!
+
+Python or PHP please. Latest versions. We can install packages if necessary.

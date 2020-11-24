@@ -1,0 +1,126 @@
+ 
+ 
+ 
+ 
+ 
+OneSpan.com
+ 
+2
+ 
+ 
+ 
+TABLE OF CONTENTS
+ 
+INTRODUCTION on OneSpan Risk Analytics
+ 
+................................
+................................
+................................
+.........
+ 
+3
+ 
+CBE requirement #1 
+-
+ 
+Successful and/or unsuccessful access att
+empts to the internet banking
+ 
+..................
+ 
+4
+ 
+CBE requirement #2&3 
+-
+ 
+Monitoring of unusual activities
+ 
+................................
+................................
+......................
+ 
+5
+ 
+CBE requirement #4 
+-
+ 
+Monitoring mechanism
+ 
+................................
+................................
+................................
+..........
+ 
+6
+ 
+CBE requirement #5 
+
+ 
+transaction and amount patterns
+ 
+................................
+................................
+.......................
+ 
+7
+ 
+CBE requirement #6 
+-
+ 
+Change of customer personal
+ 
+details
+ 
+................................
+................................
+.................
+ 
+8
+ 
+CBE requirement #7 
+-
+ 
+
+ 
+................................
+................................
+ 
+9
+ 
+CBE requirement #8 
+
+ 
+alerting to banks fraud team
+ 
+................................
+................................
+..............................
+ 
+10
+ 
+CBE requir
+ement #9 
+
+ 
+notifications to banking customers
+ 
+................................
+................................
+..................
+ 
+11
+ 
+CBE requirement #10 
+
+ 
+combating fake emails or websites
+ 
+................................
+................................
+................
+ 
+12
+ 
+ 
+ 
+ 
