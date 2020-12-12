@@ -5,6 +5,8 @@
 */Old/
 */.idea/
 */__pycache__/
+*-
+*/*-/
 json - validate-/
 *.pdf
 pandas_tutorial/data/HQ-LINUX.csv
